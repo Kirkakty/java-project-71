@@ -1,10 +1,8 @@
 name: Build
 
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -17,4 +15,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build with Gradle
-        run: ./gradlew build
+        uses: gradle/gradle-build-action@v4
+        with:
+          arguments: build
+          build-root-directory: app
