@@ -2,6 +2,7 @@ plugins {
     id("java")
     application
     id("com.diffplug.spotless") version "8.10.4"
+    jacoco
 }
 
 group = "hexlet.code"
@@ -13,6 +14,11 @@ application {
 
 repositories {
     mavenCentral()
+}
+
+jacoco {
+    toolVersion = "0.8.15"
+    reportsDirectory = layout.buildDirectory.dir("customJacocoReportDir")
 }
 
 dependencies {
@@ -36,4 +42,35 @@ spotless {
 
 tasks.test {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.check {
+    dependsOn(tasks.jacocoTestCoverageVerification)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+}
+
+tasks.jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = "0.5".toBigDecimal()
+            }
+        }
+
+        rule {
+            isEnabled = false
+            element = "CLASS"
+            includes = listOf("org.gradle.*")
+
+            limit {
+                counter = "LINE"
+                value = "TOTALCOUNT"
+                maximum = "0.3".toBigDecimal()
+            }
+        }
+    }
 }
