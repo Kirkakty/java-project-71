@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import static hexlet.code.Parsing.getData;
+import static hexlet.code.Parser.getData;
 
 import java.util.Map;
 import java.util.Objects;

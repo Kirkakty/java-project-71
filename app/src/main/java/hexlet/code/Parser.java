@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
 
-public class Parsing {
+public class Parser {
     public static Map<String, Object> getData(String fileName) throws Exception {
         String content = readFile(fileName);
         return parse(content);
