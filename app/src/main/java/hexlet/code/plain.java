@@ -38,7 +38,7 @@ public class plain {
                         .append("\n");
             }
         }
-        if (sb.length() > 0 && sb.charAt(sb.length() - 1) == '\n') {
+        if (!sb.isEmpty() && sb.charAt(sb.length() - 1) == '\n') {
             sb.setLength(sb.length() - 1);
         }
         return sb.toString();
