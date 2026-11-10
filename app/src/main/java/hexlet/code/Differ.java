@@ -1,9 +1,9 @@
 package hexlet.code;
 
+import static hexlet.code.Format.Stylish.stylishDiff;
+import static hexlet.code.Format.jsonFormat.diffToString;
+import static hexlet.code.Format.plain.plainDiff;
 import static hexlet.code.Parser.getData;
-import static hexlet.code.Stylish.stylishDiff;
-import static hexlet.code.jsonFormat.diffToString;
-import static hexlet.code.plain.plainDiff;
 
 public class Differ {
     public static String generate(String filePath1, String filePath2, String format)

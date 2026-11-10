@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.Format;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
