@@ -12,7 +12,20 @@ public class JsonTest {
         String expected = expectedFile("stylishResultTest.txt");
         String file1 = getAbsolutePath("correctFile1.json");
         String file2 = getAbsolutePath("correctFile2.json");
-        String actual = generate(file1, file2);
+        String format = "";
+        String actual = generate(file1, file2, format);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void jsonPlainTest() throws Exception{
+        String expected = expectedFile("JsonPlainTest.txt");
+        String file1 = getAbsolutePath("correctFile1.json");
+        String file2 = getAbsolutePath("correctFile2.json");
+        String format = "plain";
+        String actual = generate(file1, file2,format);
+        assertEquals(expected, actual); 
+    }
+
+
 }

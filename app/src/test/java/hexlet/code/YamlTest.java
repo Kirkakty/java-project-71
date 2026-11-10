@@ -13,7 +13,17 @@ public class YamlTest {
         String expected = expectedFile("yamlTestResult.txt");
         String file1 = getAbsolutePath("correctFile1.yaml");
         String file2 = getAbsolutePath("correctFile2.yaml");
-        String actual = generate(file1, file2);
+        String format = "";
+        String actual = generate(file1, file2,format);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void YamlPlainTest() throws Exception{
+        String expected = expectedFile("yamlPlainTest.txt");
+        String file1 = getAbsolutePath("correctFile1.yaml");
+        String file2 = getAbsolutePath("correctFile2.yaml");
+        String format = "plain";
+        String actual = generate(file1, file2,format);
         assertEquals(expected, actual);
     }
 }
