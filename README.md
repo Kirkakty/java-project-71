@@ -40,11 +40,15 @@ cd java-project-71
 
 7 шаг
 [![asciicast](https://asciinema.org/a/T5X9BbV7AQmRk0zc.svg)](https://asciinema.org/a/T5X9BbV7AQmRk0zc)
+
 9 шаг
 [![asciicast](https://asciinema.org/a/HsGQp0FGobYEbaaX.svg)](https://asciinema.org/a/HsGQp0FGobYEbaaX)
+
 10 шаг
 [![asciicast](https://asciinema.org/a/bxoT1SVenjRoBUOE.svg)](https://asciinema.org/a/bxoT1SVenjRoBUOE)
+
 11 шаг
 [![asciicast](https://asciinema.org/a/cDvHHv8q86UhUhrK.svg)](https://asciinema.org/a/cDvHHv8q86UhUhrK)
+
 12 шаг
 [![asciicast](https://asciinema.org/a/1jacZS8cB6HvjMcB.svg)](https://asciinema.org/a/1jacZS8cB6HvjMcB)
