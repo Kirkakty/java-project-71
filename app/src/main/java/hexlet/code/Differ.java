@@ -19,4 +19,7 @@ public class Differ {
                 return stylishDiff(firstFile, secondFile);
         }
     }
+    public static String generate(String filePath1, String filePath2) throws Exception {
+    return generate(filePath1,filePath2,"stylish");
+    }
 }
