@@ -13,7 +13,7 @@ public class JsonTest {
         String expected = expectedFile("stylishResultTest.txt");
         String file1 = getAbsolutePath("correctFile1.json");
         String file2 = getAbsolutePath("correctFile2.json");
-        String format = "";
+        String format = "stylish";
         String actual = generate(file1, file2, format);
         assertEquals(expected, actual);
     }
@@ -29,21 +29,41 @@ public class JsonTest {
     }
 
     @Test
-    public void YamlFilesTest() throws Exception {
+    public void yamlFilesTest() throws Exception {
         String expected = expectedFile("yamlTestResult.txt");
         String file1 = getAbsolutePath("correctFile1.yaml");
         String file2 = getAbsolutePath("correctFile2.yaml");
-        String format = "";
+        String format = "stylish";
         String actual = generate(file1, file2, format);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void YamlPlainTest() throws Exception {
+    public void yamlPlainTest() throws Exception {
         String expected = expectedFile("yamlPlainTest.txt");
         String file1 = getAbsolutePath("correctFile1.yaml");
         String file2 = getAbsolutePath("correctFile2.yaml");
         String format = "plain";
+        String actual = generate(file1, file2, format);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void yamlToJsonTest() throws Exception {
+        String expected = expectedFile("yamlJsonTest.txt");
+        String file1 = getAbsolutePath("correctFile1.yaml");
+        String file2 = getAbsolutePath("correctFile2.yaml");
+        String format = "json";
+        String actual = generate(file1, file2, format);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void jsonToJsonTest() throws Exception {
+        String expected = expectedFile("jsonToJsonTest.txt");
+        String file1 = getAbsolutePath("correctFile1.json");
+        String file2 = getAbsolutePath("correctFile2.json");
+        String format = "json";
         String actual = generate(file1, file2, format);
         assertEquals(expected, actual);
     }
