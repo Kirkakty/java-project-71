@@ -29,16 +29,13 @@ public class plain {
                             .append("\n");
                 }
             } else if (containFirst) {
-                sb.append("Property '")
-                        .append(key)
-                        .append("' was removed")
-                        .append("\n");
+                sb.append("Property '").append(key).append("' was removed").append("\n");
             } else {
                 sb.append("Property '")
                         .append(key)
                         .append("' was added with value: ")
                         .append(formatValue(data2.get(key)))
-                        .append( "\n");
+                        .append("\n");
             }
         }
         return sb.toString();
@@ -47,8 +44,7 @@ public class plain {
     private static String formatValue(Object value) {
         if (value == null) return "null";
         if (value instanceof String) return "'" + value + "'";
-        if (value instanceof List<?> || value instanceof Map<?, ?>)
-            return "[complex value]";
-            return String.valueOf(value);
-        }
+        if (value instanceof List<?> || value instanceof Map<?, ?>) return "[complex value]";
+        return String.valueOf(value);
     }
+}

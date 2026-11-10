@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.TreeSet;
 
-
 public class Stylish {
     public static String stylishDiff(Map<String, Object> data1, Map<String, Object> data2) {
         TreeSet<String> keys = new TreeSet<>();
@@ -19,22 +18,10 @@ public class Stylish {
                 Object v1 = data1.get(key);
                 Object v2 = data2.get(key);
                 if (Objects.equals(v1, v2)) {
-                    sb.append("    ")
-                            .append(key)
-                            .append(": ")
-                            .append(formatValue(v1))
-                            .append("\n");
+                    sb.append("    ").append(key).append(": ").append(formatValue(v1)).append("\n");
                 } else {
-                    sb.append("  - ")
-                            .append(key)
-                            .append(": ")
-                            .append(formatValue(v1))
-                            .append("\n");
-                    sb.append("  + ")
-                            .append(key)
-                            .append(": ")
-                            .append(formatValue(v2))
-                            .append("\n");
+                    sb.append("  - ").append(key).append(": ").append(formatValue(v1)).append("\n");
+                    sb.append("  + ").append(key).append(": ").append(formatValue(v2)).append("\n");
                 }
             } else if (containFirst) {
                 sb.append("  - ")
@@ -60,4 +47,3 @@ public class Stylish {
         return String.valueOf(value);
     }
 }
-
